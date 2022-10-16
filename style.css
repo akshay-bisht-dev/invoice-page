@@ -1,0 +1,477 @@
+/* Common CSS  */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+list-style: none;
+text-decoration: none;
+font-family: 'Baloo Bhai 2', cursive;
+}
+html{
+scroll-behavior: smooth;
+font-size: 62.5%;
+}
+
+/* Header */
+header{
+height: 10rem;
+background: rgb(237, 236, 236);
+display: flex;
+justify-content: space-between;
+padding: 0 10rem;
+align-items: center;
+}
+header .logo img{
+height: 35px;
+width: auto;
+}
+header .head-date{
+display: flex;
+flex-direction: column;
+}
+header .head-date .invoice{
+margin: 1rem 0;
+}
+header .head-date .invoice h1{
+font-size: 3rem;
+}
+header .head-date .date {
+width: 100%;
+display: flex;
+justify-content: space-between;
+font-size: 1.6rem;
+font-weight: 600;
+}
+
+/* Side Line CSS  */
+.side-line{
+background-color: pink;
+width: 25%;
+height: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: -15px;
+z-index: 10;
+position: relative;
+}
+.side-line::after {
+content: "";
+display: block;
+position: absolute;
+top: 0px;
+left: 100%;
+height: 30px;
+width: 5.5rem;
+background-color: pink;
+-webkit-clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+}
+.side-line .side-line-para{
+font-size: 2rem;
+font-weight: 600;
+color: white;
+}
+
+/* Address Head  */
+.invoice-details {
+display: flex;
+flex-direction: row;
+width: 100%;
+height: 20rem;
+background-color: white;
+padding-top: 5rem;
+padding-left: 15rem;
+}
+.invoice-address{
+margin-left: 15px;
+}
+.invoice-address-head{
+font-size: 1.8rem;
+}
+.invoice-address-para{
+font-size: 1.6rem;
+font-weight: normal;
+}
+
+/* Invoice Table */
+.invoice-table-div-head{
+background: red;
+width: 80%;
+height: 3rem;
+display: flex;
+margin: 3px auto;
+}
+.invoice-table-div-head-left{
+width: 50%;
+background-color: pink;
+position: relative;
+}
+.invoice-table-div-head-left::after {
+content: "";
+display: block;
+position: absolute;
+top: 0px;
+left: 100%;
+height: 30px;
+width: 5.5rem;
+background-color: pink;
+-webkit-clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+}
+.invoice-table-div-head-right{
+width: 50%;
+background-color: rgb(237, 236, 236);
+}
+
+.invoice-table-div{
+background: grey;
+width: 80%;
+height: max-content;
+display: flex;
+margin: auto;
+}
+
+
+
+
+
+
+
+.invoice-table-div-details{
+width: 100%;
+}
+.main-invoice-table{
+width: 100%;
+table-layout: auto;
+}
+.main-invoice-table, .tr, .td{
+border-collapse: collapse;
+padding: 15px 5px;
+font-size: 1.4rem;
+}
+.main-invoice-table .td:nth-child(2n+0){
+background-color: white;
+}
+.main-invoice-table .td:nth-child(2n+1){
+background-color: rgb(237, 236, 236);
+}
+.main-invoice-table .td:nth-child(1){
+width: 10px;
+text-align: center;
+}
+
+.main-invoice-table .td:nth-child(2){
+width: 130px;
+}
+.main-invoice-table .td:nth-child(3){
+width: 50px;
+}
+.main-invoice-table .td:nth-child(4){
+width: 50px;
+}
+.main-invoice-table .td:nth-child(5){
+width: 50px;
+}
+
+/* Payment Info CSS  */
+.payment-info{
+/* background: red; */
+display: flex;
+justify-content: space-between;
+padding: 0 10rem;
+height: 15rem;
+align-items: center;
+}
+.payment-owner-data{
+display: flex;
+}
+
+.payment-owner-data p{
+font-size: 20px;
+}
+
+.last-div{
+display: flex;
+height: 10rem;
+/* background-color: burlywood; */
+justify-content: space-between;
+padding: 0 10rem;
+align-items: center;
+}
+
+.tac-head{
+font-size: 1.4rem;
+}
+.sign{
+font-size: 1.3rem;
+font-weight: 600;
+position: relative;
+margin-top: 30px;
+position: relative;
+}
+.sign::before {
+content: "";
+border-bottom: 2px solid black;
+position: absolute;
+top: -30%;
+left: 50%;
+transform: translate(-50%);
+width: 10rem;
+}
+.total-style-para{
+font-size: 1.5rem;
+font-weight: bold;
+}
+.total-div-amt{
+width: 95%;
+display: flex;
+}
+.final-total-row {
+background-color: pink;
+height: 30px;
+display: flex;
+font-size: 1.5rem;
+justify-content: space-between;
+font-weight: bold;
+align-items: center;
+color: white;
+width: 150px;
+position: relative;
+}
+.final-total-row::after {
+content: "";
+display: block;
+position: absolute;
+top: 0px;
+left: 99%;
+height: 30px;
+width: 5.5rem;
+background-color: pink;
+-webkit-clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+}
+.table-account-details-div{
+font-weight: bold;
+}
+.tac{
+width: 40%;
+}
+
+
+
+
+.footer-invoice{
+background: red;
+width: 100%;
+height: 3rem;
+display: flex;
+margin: 3px auto;
+}
+.footer-left{
+width: 50%;
+background-color: pink;
+position: relative;
+}
+.footer-left::after {
+content: "";
+display: block;
+position: absolute;
+bottom: auto;
+left: 100%;
+height: 30px;
+width: 5.5rem;
+background-color: pink;
+-webkit-clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+}
+.footer-right{
+width: 50%;
+background-color: rgb(237, 236, 236);
+}
+
+
+
+
+/* For Page  */
+
+@media (min-width:0px) and (max-width:426px) {
+header {
+height: 8rem;
+padding: 0 1rem;
+}
+.side-line {
+width: 150px;
+}
+.side-line .side-line-para {
+font-size: 1.3rem;
+}
+header .head-date .invoice h1 {
+font-size: 3.4rem;
+}
+header .head-date .invoice {
+margin: 0;
+}
+.invoice-details {
+height: 15rem;
+padding-top: 2rem;
+padding-left: 0rem;
+margin: 0 auto;
+justify-content: center;
+}
+.invoice-table-div {
+width: 95%;
+}
+.invoice-table-div-head {
+width: 95%;
+}
+.payment-info {
+padding: 0 1rem;
+height: 20rem;
+flex-direction: column;
+width: 100%;
+text-align: left;
+margin-top: 2rem;
+}
+.last-div {
+height: 15rem;
+flex-direction: column-reverse;
+padding: 0 1rem;
+margin-top: 5rem;
+text-align: center;
+}
+.payment-info-left-details{
+width: 100%;
+}
+.payment-info-right-details{
+width: 100%;
+}
+.tac {
+width: 100%;
+}
+}
+
+
+
+@media (min-width:426px) and (max-width:750px) {
+header {
+height: 8rem;
+padding: 0 1rem;
+}
+.side-line {
+width: 150px;
+}
+.side-line .side-line-para {
+font-size: 1.3rem;
+}
+header .head-date .invoice h1 {
+font-size: 3.4rem;
+}
+header .head-date .invoice {
+margin: 0;
+}
+.invoice-details {
+height: 15rem;
+padding-top: 2rem;
+padding-left: 0rem;
+margin: 0 auto;
+justify-content: center;
+}
+.invoice-table-div {
+width: 95%;
+}
+.invoice-table-div-head {
+width: 95%;
+}
+.payment-info {
+height: 15rem;
+flex-direction: row;
+text-align: left;
+padding: 0 1rem;
+}
+.last-div {
+height: 15rem;
+flex-direction: column-reverse;
+padding: 0 1rem;
+margin-top: 5rem;
+text-align: center;
+}
+.payment-info-left-details{
+width: 100%;
+}
+.payment-info-right-details{
+width: auto;
+}
+.tac {
+width: 100%;
+}
+}
+
+
+
+@media (min-width:750px) and (max-width:1000px) {
+header {
+height: 8rem;
+padding: 0 1rem;
+}
+.side-line {
+width: 150px;
+}
+.side-line .side-line-para {
+font-size: 1.3rem;
+}
+header .head-date .invoice h1 {
+font-size: 3.4rem;
+}
+header .head-date .invoice {
+margin: 0;
+}
+.invoice-details {
+height: 15rem;
+padding-top: 2rem;
+padding-left: 3rem;
+margin: 0 auto;
+justify-content: flex-start;
+}
+.invoice-table-div {
+width: 95%;
+}
+.invoice-table-div-head {
+width: 95%;
+}
+.payment-info {
+height: 15rem;
+flex-direction: row;
+text-align: left;
+padding: 0 1rem;
+}
+.last-div {
+height: 7rem;
+flex-direction: row;
+padding: 0 1rem;
+margin-top: 2rem;
+}
+.payment-info-left-details{
+width: 100%;
+}
+.payment-info-right-details {
+width: auto;
+margin-right: 4rem;
+}
+.tac {
+width: 55%;
+}
+.sign::before {
+top: -30%;
+left: 31%;
+transform: translate(-50%);
+width: 12rem;
+}
+.sign {
+margin-top: 30px;
+padding-right: 5rem;
+}
+}
